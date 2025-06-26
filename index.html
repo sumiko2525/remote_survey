@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>リモートワークリーダーアンケート</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>リモートワークリーダーアンケート</h1>
+        <form action="submit.php" method="post">
+            <label>1. あなたの現在の勤務形態は？</label>
+            <select name="work_style" required>
+                <option value="">選択してください</option>
+                <option value="完全リモート">完全リモート</option>
+                <option value="ハイブリッド">ハイブリッド（出社とリモート併用）</option>
+                <option value="完全出社">完全出社</option>
+            </select>
+
+            <label>2. チームのコミュニケーションに満足していますか？</label>
+            <input type="radio" name="satisfaction" value="満足している" required> 満足している
+            <input type="radio" name="satisfaction" value="やや満足"> やや満足
+            <input type="radio" name="satisfaction" value="あまり満足していない"> あまり満足していない
+            <input type="radio" name="satisfaction" value="満足していない"> 満足していない
+
+            <label>3. リモートワークでのリーダーとしての悩みや課題があれば教えてください</label>
+            <textarea name="comment" rows="5" placeholder="自由にご記入ください"></textarea>
+
+            <button type="submit">送信</button>
+        </form>
+    </div>
+</body>
+</html>
