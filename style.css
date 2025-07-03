@@ -9,8 +9,8 @@ body {
 .form-container {
     background: #fff;
     max-width: 600px;
-    margin: 50px auto;
-    padding: 30px 40px;
+    margin: 40px auto;
+    padding: 30px 20px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-left: 10px solid #00b3b3;
@@ -20,6 +20,7 @@ h1 {
     color: #ff6600;
     text-align: center;
     margin-bottom: 30px;
+    font-size: 1.8em;
 }
 
 label {
@@ -27,19 +28,38 @@ label {
     margin-top: 20px;
     font-weight: bold;
     color: #006666;
+    font-size: 1.1em;
 }
 
-select, textarea, input[type="radio"] {
-    margin-top: 10px;
-    display: block;
+select, textarea {
     width: 100%;
-}
-
-textarea {
+    margin-top: 8px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
     resize: vertical;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2); /* ラジオボタンを少し大きく */
+}
+
+.radio-group {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1em;
 }
 
 button {
@@ -56,4 +76,43 @@ button {
 
 button:hover {
     background-color: #e65500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    word-break: break-word;
+}
+
+th {
+    background-color: #00b3b3;
+    color: white;
+}
+
+/* 📱 スマホ対応 */
+@media screen and (max-width: 600px) {
+    .form-container {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    .radio-option {
+        flex-direction: row;
+        align-items: center;
+    }
 }
