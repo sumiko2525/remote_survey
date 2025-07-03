@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>リモートワークリーダーアンケート</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="form-container">
         <h1>リモートワークリーダーアンケート</h1>
         <form action="submit.php" method="post">
+
             <label>1. あなたの現在の勤務形態は？</label>
             <select name="work_style" required>
                 <option value="">選択してください</option>
@@ -18,10 +20,24 @@
             </select>
 
             <label>2. チームのコミュニケーションに満足していますか？</label>
-            <input type="radio" name="satisfaction" value="満足している" required> 満足している
-            <input type="radio" name="satisfaction" value="やや満足"> やや満足
-            <input type="radio" name="satisfaction" value="あまり満足していない"> あまり満足していない
-            <input type="radio" name="satisfaction" value="満足していない"> 満足していない
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="satisfaction" value="満足している" required>
+                    満足している
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="satisfaction" value="やや満足">
+                    やや満足
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="satisfaction" value="あまり満足していない">
+                    あまり満足していない
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="satisfaction" value="満足していない">
+                    満足していない
+                </label>
+            </div>
 
             <label>3. リモートワークでのリーダーとしての悩みや課題があれば教えてください</label>
             <textarea name="comment" rows="5" placeholder="自由にご記入ください"></textarea>
